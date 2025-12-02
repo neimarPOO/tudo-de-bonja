@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Tudo de Bonja - Sabor que cola, da nossa gente pra você!</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&amp;family=Bebas+Neue&amp;family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&amp;family=Mountains+of+Christmas:wght@400;700&amp;display=swap"
+        rel="stylesheet" />
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .scrollbar-hide::-webkit-scrollbar {
+                display: none;
+            }
+            .scrollbar-hide {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .horizontal-scroll-snap {
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+        }
+        .horizontal-scroll-snap > * {
+            scroll-snap-align: start;
+        }
+        .midnight-market-image {
+            filter: grayscale(80%) brightness(0.6) saturate(0.8);
+            transition: filter 0.3s ease-in-out;
+        }
+        .group:hover .midnight-market-image {
+            filter: none;
+        }
+        .midnight-market-image::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at bottom, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+            z-index: 1;
+            border-radius: inherit;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "midnight-indigo": "#1E1635",
+                        "midnight-charcoal": "#0C0718",
+                        "midnight-emerald": "#046A38",
+                        "midnight-ruby": "#8C52FF",
+                        "midnight-gold": "#FF6D24",
+                        "midnight-light-text": "#FFFFFF",
+                        "midnight-dark-text": "#9CA3AF",
+                    },
+                    fontFamily: {
+                        "display": ["Bebas Neue", "sans-serif"],
+                        "serif": ["Playfair Display", "serif"],
+                        "christmas": ["Mountains of Christmas", "serif"],
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.75rem",
+                        "xl": "1rem",
+                        "full": "9999px",
+                    },
+                },
+            },
+        };
+    </script>
+    <script type="importmap">
+{
+  "imports": {
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.6",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0"
+  }
+}
+</script>
+    <link rel="stylesheet" href="/index.css">
+</head>
+
+<body class="font-serif bg-midnight-charcoal text-midnight-light-text antialiased">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+
+</html>
