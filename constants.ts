@@ -12,30 +12,26 @@ export const INITIAL_PRODUCTS: Product[] = [
   },
   {
     id: '2',
-    title: 'Rei do Petisco',
-    description: 'Porções generosas para compartilhar.',
-    category: 'Petiscos',
-    image: 'https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?q=80&w=2680&auto=format&fit=crop',
-    price: 28.50,
-    link: '#'
+    title: 'Os Biscoiteiros de Hogwarts',
+    category: 'Biscoitos de Natal',
+    image: '/biscoiteiros.png',
+    link: 'https://biscoiteiros-de-hogwarts.netlify.app/'
   },
   {
     id: '3',
-    title: 'Pão da Vila',
+    title: 'The Memory Crumb',
     description: 'Pães de fermentação natural.',
-    category: 'Pães',
-    image: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=2672&auto=format&fit=crop',
-    price: 12.00,
-    link: '#'
+    category: 'Biscoitos de Natal',
+    image: '/crumb.png',
+    link: 'https://the-memory-crumb.netlify.app/'
   },
   {
     id: '4',
-    title: 'Doce Sonho Confeitaria',
+    title: 'Estrela Polar',
     description: 'Fatias de bolo e doces finos.',
-    category: 'Confeitaria',
-    image: 'https://images.unsplash.com/photo-1551024709-8f23befc6f87?q=80&w=2757&auto=format&fit=crop',
-    price: 18.90,
-    link: '#'
+    category: 'Biscoitos de Natal',
+    image: '/estrela-polar.png',
+    link: 'https://estrela-polar.netlify.app/'
   },
   {
     id: '5',
