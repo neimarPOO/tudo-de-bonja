@@ -25,3 +25,36 @@ body::before {
 .text-shadow-custom {
     text-shadow: 0 2px 2px rgba(0, 0, 0, 0.8);
 }
+
+.perspective-1000 {
+    perspective: 1000px;
+}
+
+/* Christmas Lights */
+@keyframes flash-1 {
+
+    0%,
+    100% {
+        opacity: 1;
+        box-shadow: 0 0 20px 5px currentColor;
+    }
+
+    50% {
+        opacity: 0.4;
+        box-shadow: 0 0 2px 1px currentColor;
+    }
+}
+
+@keyframes flash-2 {
+
+    0%,
+    100% {
+        opacity: 0.4;
+        box-shadow: 0 0 2px 1px currentColor;
+    }
+
+        50% {
+            opacity: 1;
+            box-shadow: 0 0 20px 5px currentColor;
+        }
+    }

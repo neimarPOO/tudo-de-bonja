@@ -35,12 +35,12 @@ export const INITIAL_PRODUCTS: Product[] = [
   },
   {
     id: '5',
-    title: 'Sabor da Bahia',
-    description: 'Acarajé tradicional feito na hora.',
-    category: 'Petiscos',
-    image: 'https://images.unsplash.com/photo-1626804475297-411d87f73cf0?q=80&w=2670&auto=format&fit=crop',
+    title: 'MLB Biscoitos',
+    description: 'Biscoitos artesanais com ingredientes selecionados.',
+    category: 'Biscoitos de Natal',
+    image: '/mlb.png',
     price: 22.00,
-    link: '#'
+    link: 'https://mlb-biscoitos.netlify.app/'
   },
   {
     id: '6',
