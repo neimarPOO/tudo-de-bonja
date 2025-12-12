@@ -64,7 +64,21 @@ const AppContent: React.FC = () => {
 
           </div>
         </div>
-        <footer className="mt-auto border-t border-midnight-gold/20 bg-midnight-charcoal/50 backdrop-blur-sm px-6 py-12">
+        <footer className="mt-auto border-t border-midnight-gold/20 bg-midnight-charcoal/50 backdrop-blur-sm px-6 py-12 relative">
+          {/* Ornaments */}
+          <div className="ornament-container">
+            {Array.from({ length: 8 }).map((_, i) => {
+              const heights = [40, 60, 30, 70, 45, 65, 35, 55];
+              const colors = ['ornament-red', 'ornament-gold', 'ornament-green', 'ornament-blue'];
+              const delay = i * 0.5;
+              return (
+                <div key={i} className={`ornament ${colors[i % colors.length]}`} style={{ animationDelay: `${delay}s` }}>
+                  <div className="ornament-string" style={{ height: `${heights[i]}px` }}></div>
+                  <div className="ornament-ball"></div>
+                </div>
+              );
+            })}
+          </div>
           <div className="flex flex-col gap-10">
 
             {/* Main Footer Content */}

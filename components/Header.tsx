@@ -8,7 +8,16 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ searchQuery, onSearchChange }) => {
   return (
-    <header className="flex flex-col md:flex-row items-center justify-between whitespace-nowrap border-b-2 border-dashed border-midnight-gold px-4 sm:px-10 py-3 mb-6 gap-4">
+    <header className="relative flex flex-col md:flex-row items-center justify-between whitespace-nowrap border-b-2 border-dashed border-midnight-gold px-4 sm:px-10 py-3 mb-6 gap-4 pt-8">
+      {/* Christmas Lights - Google Style at Bottom */}
+      <div className="lights-string google-style">
+        {Array.from({ length: 60 }).map((_, i) => {
+          const colors = ['g-red', 'g-blue', 'g-green', 'g-yellow'];
+          const colorClass = colors[i % colors.length];
+          return <div key={i} className={`christmas-light ${colorClass}`} style={{ animationDelay: `${i * 0.1}s` }}></div>;
+        })}
+      </div>
+
       <div className="flex items-center gap-8 w-full md:w-auto justify-between md:justify-start">
         <Link to="/" className="flex items-center gap-4 text-midnight-light-text hover:text-midnight-gold transition-colors">
           <img src="/Escola_startUp.png" alt="Escola StartUp Logo" className="h-16 xl:h-24 w-auto object-contain" />
